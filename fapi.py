@@ -14,6 +14,7 @@ class Item(BaseModel):
     url: str
     text: str = None
 
+## Defining the response object
 class SummaryResponse(BaseModel):
     summary: List[str] = []
 
@@ -49,9 +50,12 @@ def summarize_bart(text):
 
         return summary
 
+
+## API endpoints
 @app.get("/greet")
 async def greet():
     return {"message": "Hi there!!!! I am working"}
+
 
 @app.post("/summarize", response_model=SummaryResponse)
 async def summarize(item: Item):
@@ -62,5 +66,4 @@ async def summarize(item: Item):
     return SummaryResponse(
             summary = summary_
             )
-
 
