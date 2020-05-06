@@ -3,5 +3,5 @@
 
 	- [x] Summarize using BART
 	- [x] Build the API for summary using fastapi
-	- [ ] Dockerize 
+	- [x] Dockerize 
 	- [ ] Deploy on GCP
