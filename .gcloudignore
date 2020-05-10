@@ -6,4 +6,6 @@ notebooks/*
 __pycache__
 *.md
 app.py
+models/
+models/*
 

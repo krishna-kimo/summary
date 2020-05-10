@@ -2,3 +2,11 @@ __pycache__
 notebooks
 notebooks/*
 Todo.md
+models
+models/*
+Dockerfile
+README.md
+*.pyc
+*.pyo
+*.pyd
+

@@ -7,13 +7,11 @@ LABEL version="1.0"
 WORKDIR /home/user
 
 # Install required packages
-RUN pip install fastapi
-RUN pip install transformers
-RUN pip install tensorflow==2.1.0
-RUN pip install torch==1.5.0
-RUN pip install newspaper3k
-RUN pip install gunicorn
-RUN pip install uvicorn
+COPY ./requirements.txt /tmp/requirements.txt
+RUN pip install -r /tmp/requirements.txt
+#RUN pip install fastapi && pip install transformers && pip install torch==1.5.0 && \
+#	pip install newspaper3k && pip install gunicorn && pip install uvicorn
+
 ### Need to move all the above to requirements.txt file
 
 COPY . /home/user
